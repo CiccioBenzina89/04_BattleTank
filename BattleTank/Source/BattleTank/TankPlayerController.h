@@ -2,11 +2,11 @@
 
 #pragma once
 #include "Engine/World.h"
-#include "Tank.h"
 #include "CoreMinimal.h"
 #include "GameFramework/PlayerController.h"
 #include "TankPlayerController.generated.h"
 
+class ATank;
 /**
  * 
  */
@@ -28,13 +28,13 @@ private:
 	
 	bool GetSightRayHitLocation(FVector& OutHitLocation) const;
 
-	UPROPERTY(EditAnyWhere)
+	UPROPERTY(EditDefaultsOnly)
 		float CrossHairXLocation = 0.5f;
 
-	UPROPERTY(EditAnyWhere)
+	UPROPERTY(EditDefaultsOnly)
 		float CrossHairYLocation = 0.33333f;
 	
-	UPROPERTY(EditAnyWhere)
+	UPROPERTY(EditDefaultsOnly)
 	float LineTraceRange = 1000000.f;
 
 	float Reach = 100000.f;

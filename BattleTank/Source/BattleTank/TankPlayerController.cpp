@@ -3,8 +3,9 @@
 #include "TankPlayerController.h"
 #include "Engine/World.h"
 #include "Camera/PlayerCameraManager.h"
+#include "Tank.h"
 
-#define OUT
+
 
 void ATankPlayerController::BeginPlay()
 {
@@ -85,6 +86,6 @@ bool ATankPlayerController::GetLookVectorHitLocation(FVector LookDirection, FVec
 	
 		return false;
 	
-
+		
 }
 
