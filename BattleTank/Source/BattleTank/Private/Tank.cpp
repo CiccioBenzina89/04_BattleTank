@@ -2,10 +2,12 @@
 
 #include "Tank.h"
 #include "TankAimingComponent.h"
+#include "TankMovementComponent.h"
 #include "Engine/World.h"
 #include "Components/StaticMeshComponent.h"
 #include "TankBarrel.h"
 #include "Projectile.h"
+#include "Tank.h"
 
 void ATank::SetBarrelReference(UTankBarrel * BarrelToSet)
 {
@@ -44,6 +46,7 @@ ATank::ATank()
 	PrimaryActorTick.bCanEverTick = false;
 
 	TankAimingComponent = CreateDefaultSubobject<UTankAimingComponent>(FName("Aiming Component"));
+	
 }
 
 // Called when the game starts or when spawned

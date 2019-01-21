@@ -3,9 +3,9 @@
 #include "CoreMinimal.h"
 #include "GameFramework/Pawn.h"
 #include "Tank.generated.h"
+class UTankTurret;  class UTankMovementComponent;
 class UTankBarrel;  class AProjectile;
-class UTankTurret;
-class UTankAimingComponent;
+class UTankAimingComponent;  
 UCLASS()
 class BATTLETANK_API ATank : public APawn
 {
@@ -24,9 +24,14 @@ public:
 	UFUNCTION(BlueprintCallable, Category = Firing)
 		void Fire();
 
-protected:
+	
 
+protected:
+	UPROPERTY(BlueprintReadOnly)
 	UTankAimingComponent* TankAimingComponent = nullptr;
+
+	UPROPERTY(BlueprintReadOnly)
+	UTankMovementComponent* TankMovementComponent = nullptr;
 
 private:
 	// Sets default values for this pawn's properties
